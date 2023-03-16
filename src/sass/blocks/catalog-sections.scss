@@ -1,0 +1,183 @@
+@import "./variables.scss";
+@import "./style.scss";
+@import "./fonts.scss";
+
+.catalog-sections {
+  padding: 20px;
+
+  @media (min-width: $breakpoint-m) {
+    padding: 30px;
+  }
+
+  @media (min-width: $breakpoint-l) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+    padding: 82px 110px 71px;
+  }
+
+  &__item {
+    position: relative;
+    margin-bottom: 20px;
+    padding: 30px 33px 22px 20px;
+    background-color: $basic-grey;
+
+    @media (min-width: $breakpoint-m) {
+      margin-bottom: 30px;
+      padding: 77px 316px 57px 52px;
+    }
+
+    @media (min-width: $breakpoint-l) {
+      margin-bottom: 0;
+      padding: 77px 51px 55px 52px;
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__title {
+    margin: 0 0 29px 71px;
+    font-family: $font-heading;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 37px;
+    text-transform: uppercase;
+
+    @media (min-width: $breakpoint-m) {
+      margin: 0 0 24px;
+      font-size: 36px;
+      line-height: 36px;
+    }
+
+    @media (min-width: $breakpoint-l) {
+      margin-bottom: 73px;
+      margin-left: 162px;
+    }
+
+    &::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+    }
+
+    .weight-loss &::before {
+      top: 21px;
+      left: 22px;
+      background-image: url("../assets/img/weight-loss.png");
+      width: 50px;
+      height: 53px;
+
+      @media (min-width: $breakpoint-m) {
+        top: 81px;
+        left: auto;
+        right: 62px;
+        background-image: url("../assets/img/weight-loss-tablet.png");
+        width: 200px;
+        height: 211px;
+      }
+
+      @media (min-width: $breakpoint-l) {
+        top: 41px;
+        right: auto;
+        left: 52px;
+        width: 100px;
+        height: 106px;
+        background-image: url("../assets/img/weight-loss-desktop.png");
+      }
+    }
+    
+    .weight-gain &::before {
+      top: 24px;
+      left: 13px;
+      background-image: url("../assets/img/weight-gain.png");
+      width: 67px;
+      height: 50px;
+
+      @media (min-width: $breakpoint-m) {
+        top: 91px;
+        left: auto;
+        right: 28px;
+        background-image: url("../assets/img/weight-gain-tablet.png");
+        width: 268px;
+        height: 200px;
+      }
+
+      @media (min-width: $breakpoint-l) {
+        top: 47px;
+        right: auto;
+        left: 33px;
+        width: 134px;
+        height: 100px;
+        background-image: url("../assets/img/weight-gain-desktop.png");
+      }
+    }
+  }
+
+  &__text {
+    position: relative;
+    margin: 0 0 42px;
+    font-family: $font-body;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: $special-grey;
+
+    @media (min-width: $breakpoint-m) {
+      margin-bottom: 52px;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    @media (min-width: $breakpoint-l) {
+      margin-bottom: 23px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background-color: #d9d9d9;
+      top: calc(100% + 23px);
+
+      @media (min-width: $breakpoint-m) {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    height: 16px;
+    display: block;
+    font-family: $font-heading;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $black;
+
+    @media (min-width: $breakpoint-m) {
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    &::after {
+      display: inline-block;
+      width: 32px;
+      height: 10px;
+      margin-left: 16px;
+      margin-bottom: 5px;
+      background-image: url("../assets/img/icon-arrow.svg");
+      background-repeat: no-repeat;
+      content: "";
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
