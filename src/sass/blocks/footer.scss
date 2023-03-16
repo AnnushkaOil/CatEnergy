@@ -1,0 +1,120 @@
+@import "./variables.scss";
+@import "./style.scss";
+@import "./fonts.scss";
+
+.page-footer {
+  padding: 39px 20px 22px;
+  background-color: $basic-grey;
+
+  @media (min-width: $breakpoint-m) {
+    display: flex;
+    justify-content: space-between;
+    padding: 56px 30px 57px;
+  }
+
+  @media (min-width: $breakpoint-l) {
+    padding: 57px 110px 58px;
+  }
+
+  &__developer {
+    display: flex;
+    justify-content: space-between;
+    color: $special-grey;
+    text-decoration: none;
+    font-family: $font-body;
+  }
+}
+
+.social {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 45px;
+  padding: 0 30px;
+  list-style-type: none;
+
+  @media (min-width: $breakpoint-m) {
+    width: 130px;
+    margin: 0;
+    padding: 0;
+
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #d9d9d9;
+
+    @media (min-width: $breakpoint-m) {
+      display: none;
+    }
+  }
+
+  &::before {
+    top: -20px;
+  }
+
+  &::after {
+    top: 43px;
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    width: 23px;
+    height: 23px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-width: $breakpoint-m) {
+      width: 30px;
+      height: 33px;
+    }
+
+    // &--vk {
+    //   background-image: url("../assets/img/icon_vkontakte.svg");
+    // }
+
+    // &--instagram {
+    //   background-image: url("../assets/img/icon_instagram.svg");
+    // }
+
+    // &--facebook {
+    //   background-image: url("../assets/img/icon_facebook.svg");
+    // }
+
+    
+  }
+}
+
+.logo {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &__image {
+    display: block;
+    margin: 0 auto 53px;
+
+    @media (min-width: $breakpoint-m) {
+      margin: 0;
+      padding: 7px 0 3px;
+    }
+  }
+}
+
+.developer__name {
+  padding-top: 6px;
+
+  @media (min-width: $breakpoint-m) {
+    margin-right: 22px;
+  }
+}
