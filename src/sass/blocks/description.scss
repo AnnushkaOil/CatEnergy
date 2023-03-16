@@ -1,0 +1,120 @@
+@import "./variables.scss";
+@import "./style.scss";
+@import "./fonts.scss";
+
+.description {
+  padding: 0 20px 29px;
+  position: relative;
+
+  @media (min-width: $breakpoint-m) {
+    padding: 15px 105px 47px 30px;
+  }
+
+  @media (min-width: $breakpoint-l) {
+    padding: 0 106px 69px 110px;
+  }
+
+  &::after {
+    display: none;
+
+    @media (min-width: $breakpoint-m) {
+      display: block;
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: -30px;
+      width: 130%;
+      height: 1px;
+      background-color: #e6e6e6;
+    }
+
+    @media (min-width: $breakpoint-l) {
+      display: none;
+    }
+  }
+
+  &__list {
+    counter-reset: section;
+
+    @media (min-width: $breakpoint-m) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 280px 280px;
+      row-gap: 37px;
+      column-gap: 140px;
+    }
+
+    @media (min-width: $breakpoint-l) {
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 77px;
+      grid-template-rows: 280px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    font-family: $font-body;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: $special-grey;
+
+    @media (min-width: $breakpoint-m) {
+      flex-direction: column;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      min-width: 60px;
+      height: 60px;
+      margin: 0 20px 20px 0;
+      background-color: $basic-green;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      @media (min-width: $breakpoint-m) {
+        width: 80px;
+        height: 80px;
+        margin: 40px 0 31px;
+      }
+    }
+
+    &::after {
+      display: none;
+
+      @media (min-width: $breakpoint-m) {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        counter-increment: section;
+        content: counter(section);
+        font-family: $font-heading;
+        font-size: 280px;
+        line-height: 280px;
+        color: $basic-grey;
+        z-index: -1;
+      }
+    }
+
+    &--composition::before {
+      background-image: url("../assets/img/icon_composition.svg");
+    }
+
+    &--powder::before {
+      background-image: url("../assets/img/icon_powder.svg");
+    }
+
+    &--meal::before {
+      background-image: url("../assets/img/icon_meal.svg");
+    }
+
+    &--changes::before {
+      background-image: url("../assets/img/icon_changes.svg");
+    }
+  }
+}
