@@ -1,7 +1,3 @@
-@import "./variables.scss";
-@import "./style.scss";
-@import "./fonts.scss";
-
 .catalog-sections {
   padding: 20px;
 
@@ -65,7 +61,7 @@
     .weight-loss &::before {
       top: 21px;
       left: 22px;
-      background-image: url("../assets/img/weight-loss.png");
+      background-image: url("../../img/weight-loss.png");
       width: 50px;
       height: 53px;
 
@@ -73,7 +69,7 @@
         top: 81px;
         left: auto;
         right: 62px;
-        background-image: url("../assets/img/weight-loss-tablet.png");
+        background-image: url("../../img/weight-loss-tablet.png");
         width: 200px;
         height: 211px;
       }
@@ -84,14 +80,14 @@
         left: 52px;
         width: 100px;
         height: 106px;
-        background-image: url("../assets/img/weight-loss-desktop.png");
+        background-image: url("../../img/weight-loss-desktop.png");
       }
     }
     
     .weight-gain &::before {
       top: 24px;
       left: 13px;
-      background-image: url("../assets/img/weight-gain.png");
+      background-image: url("../../img/weight-gain.png");
       width: 67px;
       height: 50px;
 
@@ -99,7 +95,7 @@
         top: 91px;
         left: auto;
         right: 28px;
-        background-image: url("../assets/img/weight-gain-tablet.png");
+        background-image: url("../../img/weight-gain-tablet.png");
         width: 268px;
         height: 200px;
       }
@@ -110,7 +106,7 @@
         left: 33px;
         width: 134px;
         height: 100px;
-        background-image: url("../assets/img/weight-gain-desktop.png");
+        background-image: url("../../img/weight-gain-desktop.png");
       }
     }
   }
@@ -171,7 +167,7 @@
       height: 10px;
       margin-left: 16px;
       margin-bottom: 5px;
-      background-image: url("../assets/img/icon-arrow.svg");
+      background-image: url("../../img/icon-arrow.svg");
       background-repeat: no-repeat;
       content: "";
     }

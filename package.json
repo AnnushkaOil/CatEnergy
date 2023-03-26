@@ -1,0 +1,52 @@
+{
+  "name": "cat-energy",
+  "private": true,
+  "description": "Личный проект «Кэт энерджи»",
+  "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "1.0.0",
+    "autoprefixer": "10.3.1",
+    "browser-sync": "^2.29.1",
+    "del": "6.0.0",
+    "gulp": "4.0.2",
+    "gulp-htmlmin": "5.0.1",
+    "gulp-libsquoosh": "^1.0.9",
+    "gulp-plumber": "1.2.1",
+    "gulp-postcss": "9.0.0",
+    "gulp-rename": "2.0.0",
+    "gulp-sass": "5.0.0",
+    "gulp-sourcemaps": "3.0.0",
+    "gulp-svgstore": "8.0.0",
+    "gulp-terser": "^2.1.0",
+    "gulp-webp": "4.0.1",
+    "postcss": "8.3.6",
+    "postcss-csso": "5.0.1",
+    "stylelint": "13.13.1",
+    "stylelint-config-htmlacademy": "0.1.10"
+  },
+  "scripts": {
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint \"src/sass/**/*.scss\" --syntax scss",
+    "test": "npm run editorconfig && npm run stylelint",
+    "build": "gulp build",
+    "start": "gulp"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "not ie <= 11"
+  ],
+  "editorconfig-cli": [
+    "*.json",
+    "*.js",
+    "src/*.html",
+    "src/js/**/*.js",
+    "src/img/**/*.svg",
+    "src/sass/**/*.sass"
+  ],
+  "engines": {
+    "node": "14.15.0"
+  },
+  "dependencies": {
+    "sass": "^1.52.1"
+  }
+}

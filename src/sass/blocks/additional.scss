@@ -1,7 +1,3 @@
-@import "./variables.scss";
-@import "./style.scss";
-@import "./fonts.scss";
-
 .additional {
   @media (min-width: $breakpoint-l) {
     display: grid;
@@ -217,8 +213,8 @@
   width: 280px;
   height: 290px;
   margin: 35px auto;
-  background-image: url("../assets/img/icon_gift.svg"),
-                    url("../assets/img/offer-background.jpg");
+  background-image: url("../../img/icon_gift.svg"),
+                    url("../../img/offer-background.jpg");
   background-repeat: no-repeat;
   background-position: top 59px center, 0 0;
 
@@ -226,8 +222,8 @@
     width: 707px;
     height: 200px;
     margin: 0 auto;
-    background-image: url("../assets/img/icon_gift.svg"),
-                    url("../assets/img/offer-background-tablet.jpg");
+    background-image: url("../../img/icon_gift.svg"),
+                    url("../../img/offer-background-tablet.jpg");
     background-size: 80px 83px, contain;
     background-position: top 57px left 77px, 0 0;
   }
@@ -236,8 +232,8 @@
     width: 245px;
     height: 289px;
     margin: 0 110px 0 auto;
-    background-image: url("../assets/img/icon_gift.svg"),
-                    url("../assets/img/offer-background-desktop.jpg");
+    background-image: url("../../img/icon_gift.svg"),
+                    url("../../img/offer-background-desktop.jpg");
     background-size: 80px 83px, contain;
     background-position: top 56px center, 0 0;
     

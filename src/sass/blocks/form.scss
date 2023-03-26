@@ -1,7 +1,3 @@
-@import "./variables.scss";
-@import "./style.scss";
-@import "./fonts.scss";
-
 .page-main__text {
   margin: 0;
   padding: 0 74px 39px 20px; 
@@ -337,18 +333,18 @@
     }
 
     &--email {
-      background-image: url("../assets/img/icon_email.svg");
+      background-image: url("../../img/icon_email.svg");
       background-repeat: no-repeat;
       background-position: top 50% right 16px;
 
       &:focus,
       &:focus-visible {
-        background-image: url("../assets/img/icon-email-green.svg");
+        background-image: url("../../img/icon-email-green.svg");
       }
     }
 
     &--phone {
-      background-image: url("../assets/img/icon_phone.svg");
+      background-image: url("../../img/icon_phone.svg");
       background-repeat: no-repeat;
       background-position: top 50% right 13px;
     }
@@ -481,12 +477,12 @@
     left: 20%;
     width: 18px;
     height: 14px;
-    background-image: url("../assets/img/tick.svg");
+    background-image: url("../../img/tick.svg");
 
     @media (min-width: $breakpoint-m) {
       width: 25px;
       height: 19px;
-      background-image: url("../assets/img/tick-big.svg");
+      background-image: url("../../img/tick-big.svg");
     }
 
     :active {

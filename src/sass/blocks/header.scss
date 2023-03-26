@@ -1,7 +1,3 @@
-@import "./variables.scss";
-@import "./style.scss";
-@import "./fonts.scss";
-
 .page-header {
   position: relative;
   display: flex;
@@ -24,35 +20,40 @@
       justify-content: space-between;      
     }
     
-  &--nojs {
-    width: 100%;
-    margin-top: 17px;
-    margin-bottom: -17px;
+    &--nojs {
+      width: 100%;
+      margin-top: 17px;
+      margin-bottom: -17px;
 
-    @media (min-width: $breakpoint-m) {
-      width: auto;
-      margin: 0;
-    }
+      @media (min-width: $breakpoint-m) {
+        width: auto;
+        margin: 0;
+      }
 
-    & .site-menu {
-      position: static;
-    }
-
-    & .page-header__toggle {
-      display: none;
-    }
-  }
-
-  &--closed {
-    @media (max-width: 767px) {
       & .site-menu {
-      display: none;
+        position: static;
+      }
+
+      & .page-header__toggle {
+        display: none;
+      }
     }
+
+    &--closed {
+      @media (max-width: 767px) {
+        & .site-menu {
+        display: none;
+        }
+      }
     }
-  }
+
+    &--opened .page-header__toggle {
+      background-image: url("../../img/cross.svg");
+    }
   }
 
   &__logo {
+    display: flex;
     height: 38px;
 
     &-image--cat {
@@ -71,8 +72,9 @@
     }
 
     &-image--title {
+      display: block;
       margin-right: 9px;
-      vertical-align: super;
+      margin-top: 13px;
 
       @media (min-width: $breakpoint-m) {
         display: none;
@@ -95,7 +97,7 @@
   margin-top: 14px;
   background-color: $white;
   border: none;
-  background-image: url("../assets/img/header-menu.svg");
+  background-image: url("../../img/header-menu.svg");
   background-position: center;
   background-repeat: no-repeat;
 
@@ -141,11 +143,14 @@
   padding: 22px 30px 24px;
   text-decoration: none;
   color: $black;
-  font-family: $font-heading;
-  font-weight: 500;
+  font-weight: 300;
   font-size: 20px;
   line-height: 20px;
   text-transform: uppercase;
+
+  &:hover {
+    opacity: 0.6;
+  }
 
   @media (min-width: $breakpoint-m) {
     padding: 15px 17px 8px;
@@ -185,10 +190,10 @@
         height: 2px;
         background-color: $basic-green;  
       }
+    }
 
-      @media (min-width: $breakpoint-l) {
-        background-color: $black;
-      }
+    &--down {
+      opacity: 0.3;
     }
   }
 }
