@@ -58,9 +58,13 @@
       text-align: right;
     }
 
-    & br {
+    & p {
       @media (max-width: $breakpoint-m) {
-        display: none;
+        margin: 0;
+      }
+
+      @media (min-width: $breakpoint-m) {
+        margin: 4px 0 8px;
       }
     }
   }
